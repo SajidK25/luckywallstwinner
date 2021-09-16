@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="../javascripts/price.js"></script>
+  <link rel="stylesheet" href="../stylesheets/style.css">
+
+
+</head>
+
+<body>
+
+  <div class="row">
+    <div class="container">
+      <h1>Custom Stock Data</h1>
+      <button onclick="load(0,1000,'g')" class="btn btn-success">1000$</button>
+      <button onclick="load(0,500,'g')" class="btn btn-success">500$</button>
+      <button onclick="load(0,300,'g')" class="btn btn-success">300$</button>
+      <button onclick="load(0,200,'g')" class="btn btn-success">200$</button>
+      <button onclick="load(0,100,'g')" class="btn btn-success">100$</button>
+      <button onclick="load(0,50,'g')" class="btn btn-success">50$</button>
+
+      <button onclick="load(0,50,'l')" class="btn btn-danger">50$</button>
+      <button onclick="load(0,100,'l')" class="btn btn-danger">100$</button>
+      <button onclick="load(0,200,'l')" class="btn btn-danger">200$</button>
+      <button onclick="load(0,300,'l')" class="btn btn-danger">300$</button>
+      <button onclick="load(0,500,'l')" class="btn btn-danger">500$</button>
+      <button onclick="load(0,1000,'l')" class="btn btn-danger">1000$</button>
+      <br><br>
+      <div class="zui-wrapper">
+        <div class="zui-scroller">
+          <table class="zui-table table table-dark sortable" id="sort">
+            <thead>
+              <tr>
+                <th scope="col" onclick="sort('symbol',-1)" class="zui-sticky-col">Symbol</th>
+                <th scope="col" onclick="sort('price')">Price</th>
+                <th scope="col" onclick="sort('change')">Change</th>
+                <th scope="col" onclick="sort('percentage')">%</th>
+              </tr>
+            </thead>
+            <tbody id="tb">
+
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

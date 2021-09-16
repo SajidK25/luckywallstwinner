@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <script src="../javascripts/categorised.js"></script>
+  <link rel="stylesheet" href="../stylesheets/style.css">
+
+
+</head>
+
+<body>
+
+  <div class="row">
+    <div class="container">
+      <h1>Custom Stock Data</h1>
+
+      
+      <button onclick="load()" class="btn btn-success">Refresh</button>
+      <br><br>
+      <div class="zui-wrapper">
+        <div class="zui-scroller">
+
+          <div class="title">Gainers</div>
+          <table class="zui-table table table-dark" id="sort">
+            <thead>
+              <tr>
+                <th scope="col" class="zui-sticky-col">Symbol</th>
+                <th scope="col">Price</th>
+                <th scope="col">Change</th>
+                <th scope="col">%</th>
+              </tr>
+            </thead>
+            <tbody id="tb_g">
+            </tbody>
+          </table>
+
+          <br>
+          <div class="title">8%</div>
+          <table class="zui-table table table-dark" id="sort">
+            <thead>
+              <tr>
+                <th scope="col" class="zui-sticky-col">Symbol</th>
+                <th scope="col">Price</th>
+                <th scope="col">Change</th>
+                <th scope="col">%</th>
+              </tr>
+            </thead>
+            <tbody id="tb_8">
+            </tbody>
+          </table>
+
+          <br>
+          <div class="title">6%</div>
+          <table class="zui-table table table-dark" id="sort">
+            <thead>
+              <tr>
+                <th scope="col" class="zui-sticky-col">Symbol</th>
+                <th scope="col">Price</th>
+                <th scope="col">Change</th>
+                <th scope="col">%</th>
+              </tr>
+            </thead>
+            <tbody id="tb_6">
+            </tbody>
+          </table>
+
+          <br>
+          <div class="title">4%</div>
+          <table class="zui-table table table-dark" id="sort">
+            <thead>
+              <tr>
+                <th scope="col" class="zui-sticky-col">Symbol</th>
+                <th scope="col">Price</th>
+                <th scope="col">Change</th>
+                <th scope="col">%</th>
+              </tr>
+            </thead>
+            <tbody id="tb_4">
+            </tbody>
+          </table>
+
+          <br>
+          <div class="title">2%</div>
+          <table class="zui-table table table-dark" id="sort">
+            <thead>
+              <tr>
+                <th scope="col" class="zui-sticky-col">Symbol</th>
+                <th scope="col">Price</th>
+                <th scope="col">Change</th>
+                <th scope="col">%</th>
+              </tr>
+            </thead>
+            <tbody id="tb_2">
+            </tbody>
+          </table>
+
+          <br>
+          <div class="title">-2%</div>
+          <table class="zui-table table table-dark" id="sort">
+            <thead>
+              <tr>
+                <th scope="col" class="zui-sticky-col">Symbol</th>
+                <th scope="col">Price</th>
+                <th scope="col">Change</th>
+                <th scope="col">%</th>
+              </tr>
+            </thead>
+            <tbody id="tb_n2">
+            </tbody>
+          </table>
+
+          <br>
+          <div class="title">-4%</div>
+          <table class="zui-table table table-dark" id="sort">
+            <thead>
+              <tr>
+                <th scope="col" class="zui-sticky-col">Symbol</th>
+                <th scope="col">Price</th>
+                <th scope="col">Change</th>
+                <th scope="col">%</th>
+              </tr>
+            </thead>
+            <tbody id="tb_n4">
+            </tbody>
+          </table>
+
+          <br>
+          <div class="title">-6%</div>
+          <table class="zui-table table table-dark" id="sort">
+            <thead>
+              <tr>
+                <th scope="col" class="zui-sticky-col">Symbol</th>
+                <th scope="col">Price</th>
+                <th scope="col">Change</th>
+                <th scope="col">%</th>
+              </tr>
+            </thead>
+            <tbody id="tb_n6">
+            </tbody>
+          </table>
+
+          <br>
+          <div class="title">-8%</div>
+          <table class="zui-table table table-dark" id="sort">
+            <thead>
+              <tr>
+                <th scope="col" class="zui-sticky-col">Symbol</th>
+                <th scope="col">Price</th>
+                <th scope="col">Change</th>
+                <th scope="col">%</th>
+              </tr>
+            </thead>
+            <tbody id="tb_n8">
+            </tbody>
+          </table>
+
+          <br>
+          <div class="title">losers</div>
+          <table class="zui-table table table-dark" id="sort">
+            <thead>
+              <tr>
+                <th scope="col" class="zui-sticky-col">Symbol</th>
+                <th scope="col">Price</th>
+                <th scope="col">Change</th>
+                <th scope="col">%</th>
+              </tr>
+            </thead>
+            <tbody id="tb_l">
+            </tbody>
+          </table>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
