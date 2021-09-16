@@ -19,6 +19,7 @@ router.get('/', function (req, res, next) {
         user.rankBy('c', -1);
     }
     res.send(user.getSymbolsFromArray(user.DATA_array.slice(0, s)));
+    // res.send(["DJI","NDX"]);
 });
 
 
