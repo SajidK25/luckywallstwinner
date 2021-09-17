@@ -16,7 +16,7 @@ $(document).ready(function () {
                     "symbol": stock.symbol || 0 ,
                     "price": stock.regularMarketPrice || 0 ,
                     "change": stock.regularMarketChange || 0 ,
-                    "percentage": stock.regularMarketChangePercent || 0 
+                    "volume": stock.regularMarketVolume || 0 
                 }
 
                 stocks.push(s);
@@ -44,7 +44,7 @@ function load(l, h,gl) {
                 + "<td id=" + s + "_symbol class='zui-sticky-col'></td>"
                 + "<td id=" + s + "_price ></td>"
                 + "<td id=" + s + "_change ></td>"
-                + "<td id=" + s + "_percentage></td>"
+                + "<td id=" + s + "_volume></td>"
                 + "</tr>"
         });
         $("#tb").html(ht);
@@ -87,7 +87,7 @@ function sort(prop) {
             + "<td id=" + s + "_symbol class='zui-sticky-col'></td>"
             + "<td id=" + s + "_price ></td>"
             + "<td id=" + s + "_change ></td>"
-            + "<td id=" + s + "_percentage></td>"
+            + "<td id=" + s + "_volume></td>"
             + "</tr>"
     });
     $("#tb").html(htm);
@@ -113,12 +113,12 @@ function updateTable() {
         $("#" + stock.symbol + "_symbol").html(stock.symbol);
         $("#" + stock.symbol + "_price").html(stock.price.toFixed(3));
         $("#" + stock.symbol + "_change").html(stock.change.toFixed(3));
-        $("#" + stock.symbol + "_percentage").html(stock.percentage.toFixed(2) + "%");
-        if (stock.percentage < 0) {
-            $("#" + stock.symbol + "_percentage").css('color', 'red');
-        } else {
-            $("#" + stock.symbol + "_percentage").css('color', 'green');
-        }
+        $("#" + stock.symbol + "_volume").html(stock.volume.toFixed(3));
+        // if (stock.percentage < 0) {
+        //     $("#" + stock.symbol + "_volume").css('color', 'red');
+        // } else {
+        //     $("#" + stock.symbol + "_volume").css('color', 'green');
+        // }
     });
 
     
