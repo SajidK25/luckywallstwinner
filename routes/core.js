@@ -18,7 +18,9 @@ router.get('/', function (req, res, next) {
         user.filterBy('cp', l, h);
         user.rankBy('c', -1);
     }
-    res.send(user.getSymbolsFromArray(user.DATA_array.slice(0, s)));
+    res.send(user.getSymbolsFromArray(user.DATA_array.slice(0, s).filter((e) =>
+        e.s.length < 5
+    )));
     // res.send(["DJI","NDX"]);
 });
 
@@ -37,7 +39,7 @@ router.get('/price/', function (req, res, next) {
 
         user.rankBy('c', 1);
     } else {
-        user.filterBy('cp', -100000000,0);
+        user.filterBy('cp', -100000000, 0);
         user.rankBy('c', -1);
     }
 

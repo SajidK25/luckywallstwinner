@@ -1,44 +1,69 @@
-body{
+body {
   background-color: black;
 }
-th{
+th {
   cursor: pointer;
 }
 
 .zui-table {
-    border: none;
-    border-collapse: separate;
+  border: none;
+  border-collapse: separate;
 }
 .zui-table thead th {
-    border: none;
-    padding: 10px;
-    text-align: center;
-    white-space: nowrap;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap;
 }
 .zui-table tbody td {
-    text-align: center;
-    padding: 10px;
-    white-space: nowrap;
+  text-align: center;
+  padding: 10px;
+  white-space: nowrap;
 }
 .zui-wrapper {
-    position: relative;
-    width : "90%"
+  position: relative;
+  width: "90%";
 }
 .zui-scroller {
-    margin-left: 75px;
-    overflow-x: scroll;
-    overflow-y: visible;
-    padding-bottom: 5px;
-    width: calc(100%-75px);
+  margin-left: 75px;
+  overflow-x: scroll;
+  overflow-y: visible;
+  padding-bottom: 5px;
+  width: calc(100%-75px);
 }
 .zui-table .zui-sticky-col {
-    left: 0;
-    position: absolute;
-    top: auto;
-    width:75px;
+  left: 0;
+  position: absolute;
+  top: auto;
+  width: 75px;
+  text-align: left;
 }
 
-.title{
-    color: aqua;
+.title {
+  color: aqua;
+}
 
+a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.watchlist {
+  color: aqua;
+}
+
+#watchListTextArea {
+  background: rgb(56, 56, 56);
+  color: azure;
+}
+
+#watchListForm {
+  margin: 3%;
 }

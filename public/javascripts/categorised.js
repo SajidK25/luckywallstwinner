@@ -19,7 +19,8 @@ $(document).ready(function () {
                     "change": stock.regularMarketChange || 0,
                     "percentage": stock.regularMarketChangePercent || 0
                 }
-
+                if (s.symbol.length > 4)
+                    return;
                 stocks.push(s);
             });
             updateTable();
@@ -30,7 +31,7 @@ $(document).ready(function () {
 
 function load() {
     LOAD = [["n8", -100, -8], ["n6", -8, -6], ["n4", -6, -4], ["n2", -4, -2]
-        , ["2", 2, 4], ["4", 4, 6], ["6", 6, 8], ["8", 8, 100],["l", -1000000, 0], ["g", 0, 10000000]];
+        , ["2", 2, 4], ["4", 4, 6], ["6", 6, 8], ["8", 8, 100], ["l", -1000000, 0], ["g", 0, 10000000]];
 
     LOADGL = [["l", -1000000, 0], ["g", 0, 10000000]];
     symbols = "";

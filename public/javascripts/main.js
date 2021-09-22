@@ -18,7 +18,8 @@ $(document).ready(function () {
                     "change": stock.regularMarketChange || 0,
                     "percentage": stock.regularMarketChangePercent || 0
                 }
-
+                if (s.symbol.length > 4)
+                    return;
                 stocks.push(s);
             });
             updateTable();
@@ -121,7 +122,7 @@ function updateTable() {
         }
     });
 
-    
+
 
 }
 
