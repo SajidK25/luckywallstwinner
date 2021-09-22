@@ -18,9 +18,9 @@ router.get('/', function (req, res, next) {
         user.filterBy('cp', l, h);
         user.rankBy('c', -1);
     }
-    res.send(user.getSymbolsFromArray(user.DATA_array.slice(0, s).filter((e) =>
+    res.send(user.getSymbolsFromArray(user.DATA_array.filter((e) =>
         e.s.length < 5
-    )));
+    ).slice(0, s)));
     // res.send(["DJI","NDX"]);
 });
 
