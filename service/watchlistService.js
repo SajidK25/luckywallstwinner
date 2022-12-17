@@ -1,5 +1,5 @@
 const { MongoClient } = require('mongodb');
-const uri = "mongodb+srv://kundan:Al3YcgIVOTzWskM4@cluster0.92gdy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const uri = "mongodb+srv://Lucky720:d7E8XysIxSbEBlnc@cluster0.zci9rwv.mongodb.net";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 function findOne(query) {
