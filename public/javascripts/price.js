@@ -2,7 +2,7 @@ symbols = "";
 stocks = [];
 $(document).ready(function () {
 
-    load(0, 10000000)
+    load(0, 10000000);
 
     setInterval(() => {
         //https://chami-cors.herokuapp.com/
@@ -23,7 +23,6 @@ $(document).ready(function () {
                 stocks.push(s);
             });
             updateTable();
-
             console.log(stocks);
         });
     }, 1000)

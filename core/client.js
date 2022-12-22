@@ -1,5 +1,4 @@
 module.exports.start = function () {
-
     symbols = require("../data/symbols.json")
     console.log("inside client");
     const fetch = require('node-fetch');

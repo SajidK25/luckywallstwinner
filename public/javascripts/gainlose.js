@@ -36,7 +36,8 @@ $(document).ready(function () {
     setInterval(() => {
         //https://chami-cors.herokuapp.com/
         //https://aldrin-cors.herokuapp.com/
-        $.get("https://query1.finance.yahoo.com/v7/finance/quote?symbols=" + symbols, function (data, status) {
+        console.log(symbols);
+        $.get("/fetch_data?s=" + symbols, function (data, status) {
             //stocks_ = JSON.parse(data);
             stocks_ = data;
             stocks = []
@@ -53,8 +54,6 @@ $(document).ready(function () {
                 stocks.push(s);
             });
             updateTable();
-
-            console.log(stocks);
         });
     }, 1000)
 

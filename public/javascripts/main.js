@@ -23,7 +23,6 @@ $(document).ready(function () {
                 stocks.push(s);
             });
             updateTable();
-
             console.log(stocks);
         });
     }, 1000)

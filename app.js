@@ -10,6 +10,7 @@ var symbolsRouter = require('./routes/symbols');
 var usersRouter = require('./routes/users');
 var coreRouter = require('./routes/core');
 var categorisedRouter = require('./routes/categorised');
+const helloRouter = require('./routes/hello');
 
 
 var app = express();
@@ -18,7 +19,8 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(cors())
+app.use(cors());
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -31,6 +33,7 @@ app.use('/users', usersRouter);
 app.use('/core', coreRouter);
 app.use('/symbols', symbolsRouter);
 app.use('/categorised', categorisedRouter);
+app.use('/fetch_data', helloRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
