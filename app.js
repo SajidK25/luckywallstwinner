@@ -33,7 +33,7 @@ app.use('/users', usersRouter);
 app.use('/core', coreRouter);
 app.use('/symbols', symbolsRouter);
 app.use('/categorised', categorisedRouter);
-app.use('/fetch_data', helloRouter);
+// app.use('/fetch_data', helloRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
