@@ -37,7 +37,7 @@ $(document).ready(function () {
         //https://chami-cors.herokuapp.com/
         //https://aldrin-cors.herokuapp.com/
         console.log(symbols);
-        $.get("https://query1.finance.yahoo.com/v7/finance/quote?symbols=" + symbols, function (data, status) {
+        $.get("https://luckywallstwinner.herokuapp.com/https://query1.finance.yahoo.com/v7/finance/quote?symbols=" + symbols, function (data, status) {
             //stocks_ = JSON.parse(data);
             stocks_ = data;
             stocks = []
