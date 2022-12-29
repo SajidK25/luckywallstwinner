@@ -17,7 +17,7 @@ module.exports.start = function () {
             // clearInterval(query);
         }
         s = s.slice(0, s.length - 1).join(",")
-        fetch("http://query1.finance.yahoo.com/v7/finance/quote?symbols=" + s)
+        fetch("https://query1.finance.yahoo.com/v7/finance/quote?symbols=" + s)
             .then(res => res.json())
             .then(stock => {
                 try {
