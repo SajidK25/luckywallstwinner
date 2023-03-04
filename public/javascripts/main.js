@@ -5,28 +5,42 @@ $(document).ready(function () {
     load(0, 10000000)
 
     setInterval(() => {
-        //https://chami-cors.herokuapp.com/
-        //https://aldrin-cors.herokuapp.com/
-        $.get("https://query1.finance.yahoo.com/v7/finance/quote?symbols=" + symbols, function (data, status) {
-            stocks_ = data
-            //stocks_ = data;
-            stocks = []
-            stocks_.quoteResponse.result.forEach(stock => {
-                s = {
-                    "symbol": stock.symbol || 0,
-                    "price": stock.regularMarketPrice || 0,
-                    "change": stock.regularMarketChange || 0,
-                    "percentage": stock.regularMarketChangePercent || 0
-                }
-                if (s.symbol.length > 4)
-                    return;
-                stocks.push(s);
-            });
-            updateTable();
-            console.log(stocks);
+        $.ajax({
+            // headers: { "Accept": "application/json"},
+            
+            type: 'GET',
+            url: "https://cors-anywhere.herokuapp.com/https://query1.finance.yahoo.com/v7/finance/quote?symbols=" + symbols,
+            // crossDomain: true,
+            cors: true ,
+            contentType:'application/json',
+            dataType: 'json',
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+            },
+        //     beforeSend: function(xhr){
+        //         xhr.withCredentials = true;
+        //   },
+            success: function (data, status) {
+                console.log(data)
+                stocks_ = data;
+                //stocks_ = data;
+                stocks = []
+                stocks_.quoteResponse.result.forEach(stock => {
+                    s = {
+                        "symbol": stock.symbol || 0 ,
+                        "price": stock.regularMarketPrice || 0 ,
+                        "change": stock.regularMarketChange || 0 ,
+                        "volume": stock.regularMarketVolume || 0 
+                    }
+                    if(s.symbol.length > 4) 
+                        return;
+                    stocks.push(s);
+                });
+                updateTable();
+                console.log(stocks);
+            }
         });
-    }, 1000)
-
+        }, 1000)
 });
 
 function logResults(json) {
